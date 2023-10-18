@@ -18,7 +18,44 @@ public class Player1 {
 		}
 		System.out.println("Got Hit by Gun1. Health is Reduced by 30. New Health is " + this.health);
 		if (this.health == 0) {
-			System.out.println("Player is Dead!");
+			System.out.println(getName() + " is Dead!");
 		}
 	}
+	
+	public void damageByGun2() {
+		this.health -= 50;
+		if(this.health <= 0) {
+			this.health = 0;
+		}
+		System.out.println("Got Hit by Gun2. Health is Reduced by 50. New Health is " + this.health);
+		if (this.health == 0) {
+			System.out.println(getName() + " is Dead!");
+		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getWeapon() {
+		return weapon;
+	}
+
+	public void setWeapon(String weapon) {
+		this.weapon = weapon;
+	}
+
+	public int getHealth() {
+		return health;
+	}
+
+	public void setHealth(int health) {
+		this.health = health;
+	}
+	
+	
 }
